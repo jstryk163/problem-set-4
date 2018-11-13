@@ -71,10 +71,10 @@ function fahrenheit() {
   // (inclusive), and rounds this value to 2 decimal places.
 
   // WRITE YOUR EXERCISE 4 CODE HERE
-  var celsTemp= ((fahr-32) * (5/9)
-  var celsRound= celsTemp.toFixed(2)
+  var celsTemp= ((fahr-32) * (5/9));
+  var celsRound= celsTemp.toFixed(2);
   var div = document.getElementById("output4");
-  div.innerHTML = fahr + " degrees Fahrenheit equals " + celsRound +" degrees celsius."
+  div.innerHTML = fahr + " degrees Fahrenheit equals " + celsRound +" degrees Celsius.";
   ///////////////////////////// DO NOT MODIFY
   check("fahrenheit", fahr); // DO NOT MODIFY
   ///////////////////////////// DO NOT MODIFY
