@@ -98,7 +98,18 @@ function inches() {
   ////////////////////// DO NOT MODIFY
 
   // WRITE YOUR EXERCISE 5 CODE HERE
-
+  let miles= 0
+  let yards= 0;
+  let feet = 0;
+  let inches = 0;
+  while (inches > 0){
+    if ( inches >= 63360){
+      inches = inches-36
+      miles = miles +1;
+    }
+var div=document.getElementById(output5)
+div.innerHTML = "Miles" + miles + "<br>Yards: " + yards + "<br>Feet: " + feet + "<br>Inches: " + inches
+}
   ////////////////////////// DO NOT MODIFY
   check("inches", input); // DO NOT MODIFY
   ////////////////////////// DO NOT MODIFY
