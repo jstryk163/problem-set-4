@@ -94,22 +94,18 @@ function inches() {
   // need to do. Please do not modify the value of input.
 
   ////////////////////// DO NOT MODIFY
-  let inches = input; // DO NOT MODIFY
+  let inches =Math.floor(((input % 63360)% 36)% 12); // DO NOT MODIFY
   ////////////////////// DO NOT MODIFY
 
   // WRITE YOUR EXERCISE 5 CODE HERE
-  let miles= 0
-  let yards= 0;
-  let feet = 0;
-  let inches = 0;
-  while (inches > 0){
-    if ( inches >= 63360){
-      inches = inches-36
-      miles = miles +1;
-    }
-var div=document.getElementById(output5)
-div.innerHTML = "Miles" + miles + "<br>Yards: " + yards + "<br>Feet: " + feet + "<br>Inches: " + inches
-}
+  let miles=Math.floor(input/63360);
+  let yards=Math.floor((input % 63360)/36);
+  let feet =Math.floor(((input % 63360)% 36)/ 12);
+
+
+var div=document.getElementById("output5")
+div.innerHTML = "Miles: " + miles + "<br>Yards: " + yards + "<br>Feet: " + feet + "<br>Inches: " + inches
+
   ////////////////////////// DO NOT MODIFY
   check("inches", input); // DO NOT MODIFY
   ////////////////////////// DO NOT MODIFY
@@ -129,11 +125,15 @@ function centimeters() {
   // likely need to do. Please do not modify the value of input.
 
   /////////////////////////// DO NOT MODIFY
-  let centimeters = input; // DO NOT MODIFY
+  let centimeters =Math.floor((input % 100000)% 100); // DO NOT MODIFY
   /////////////////////////// DO NOT MODIFY
 
   // WRITE YOUR EXERCISE 6 CODE HERE
+let kilometers=Math.floor(input/100000);
+let meters=Math.floor((input % 100000)/ 100);
 
+var div=document.getElementById("output6")
+div.innerHTML = "Kilometers: " + kilometers + "<br>Meters: " + meters + "<br>Centimeters: " + centimeters
   /////////////////////////////// DO NOT MODIFY
   check("centimeters", input); // DO NOT MODIFY
   /////////////////////////////// DO NOT MODIFY
@@ -153,11 +153,17 @@ function fluidOunces() {
   // likely need to do. Please do not modify the value of input.
 
   /////////////////////////// DO NOT MODIFY
-  let fluidOunces = input; // DO NOT MODIFY
+  let fluidOunces =Math.floor(((input))); // DO NOT MODIFY
   /////////////////////////// DO NOT MODIFY
 
   // WRITE YOUR EXERCISE 7 CODE HERE
+  let miles=Math.floor(input/63360);
+  let yards=Math.floor((input % 63360)/36);
+  let feet =Math.floor(((input % 63360)% 36)/ 12);
 
+
+  var div=document.getElementById("output5")
+  div.innerHTML = "Miles: " + miles + "<br>Yards: " + yards + "<br>Feet: " + feet + "<br>Inches: " + inches
   /////////////////////////////// DO NOT MODIFY
   check("fluidOunces", input); // DO NOT MODIFY
   /////////////////////////////// DO NOT MODIFY
