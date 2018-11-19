@@ -94,13 +94,13 @@ function inches() {
   // need to do. Please do not modify the value of input.
 
   ////////////////////// DO NOT MODIFY
-  let inches =Math.floor(((input % 63360)% 36)% 12); // DO NOT MODIFY
+  let inches =Math.floor(((input%63360)%36)%12); // DO NOT MODIFY
   ////////////////////// DO NOT MODIFY
 
   // WRITE YOUR EXERCISE 5 CODE HERE
   let miles=Math.floor(input/63360);
-  let yards=Math.floor((input % 63360)/36);
-  let feet =Math.floor(((input % 63360)% 36)/ 12);
+  let yards=Math.floor((input%63360)/36);
+  let feet =Math.floor(((input%63360)%36)/12);
 
 
 var div=document.getElementById("output5")
@@ -125,12 +125,12 @@ function centimeters() {
   // likely need to do. Please do not modify the value of input.
 
   /////////////////////////// DO NOT MODIFY
-  let centimeters =Math.floor((input % 100000)% 100); // DO NOT MODIFY
+  let centimeters =Math.floor((input%100000)%100); // DO NOT MODIFY
   /////////////////////////// DO NOT MODIFY
 
   // WRITE YOUR EXERCISE 6 CODE HERE
 let kilometers=Math.floor(input/100000);
-let meters=Math.floor((input % 100000)/ 100);
+let meters=Math.floor((input%100000)/100);
 
 var div=document.getElementById("output6")
 div.innerHTML = "Kilometers: " + kilometers + "<br>Meters: " + meters + "<br>Centimeters: " + centimeters
@@ -153,17 +153,17 @@ function fluidOunces() {
   // likely need to do. Please do not modify the value of input.
 
   /////////////////////////// DO NOT MODIFY
-  let fluidOunces =Math.floor(((input))); // DO NOT MODIFY
+  let fluidOunces =Math.floor((((input%128)%32)%16)%8); // DO NOT MODIFY
   /////////////////////////// DO NOT MODIFY
 
   // WRITE YOUR EXERCISE 7 CODE HERE
-  let miles=Math.floor(input/63360);
-  let yards=Math.floor((input % 63360)/36);
-  let feet =Math.floor(((input % 63360)% 36)/ 12);
+  let gallons=Math.floor(input/128);
+  let quarts=Math.floor((input%128)/32);
+  let pints=Math.floor(((input%128)%32)/16);
+  let cups=Math.floor((((input%128)%32)%16)/8);
 
-
-  var div=document.getElementById("output5")
-  div.innerHTML = "Miles: " + miles + "<br>Yards: " + yards + "<br>Feet: " + feet + "<br>Inches: " + inches
+  var div=document.getElementById("output7")
+  div.innerHTML = "Gallons: " + gallons + "<br>Quarts: " + quarts + "<br>Pints: " + pints + "<br>Cups: " + cups + "<br>Fluid Ounces: " + fluidOunces
   /////////////////////////////// DO NOT MODIFY
   check("fluidOunces", input); // DO NOT MODIFY
   /////////////////////////////// DO NOT MODIFY
@@ -183,11 +183,15 @@ function ounces() {
   // need to do. Please do not modify the value of input.
 
   ////////////////////// DO NOT MODIFY
-  let ounces = input; // DO NOT MODIFY
+  let ounces =Math.floor((input%32000)%16); // DO NOT MODIFY
   ////////////////////// DO NOT MODIFY
 
   // WRITE YOUR EXERCISE 8 CODE HERE
+  let tons=Math.floor(input/32000);
+  let pounds=Math.floor((input%32000)/16);
 
+  var div=document.getElementById("output8")
+  div.innerHTML = "Tons: " + tons + "<br>Pounds: " + pounds + "<br>Ounces: " + ounces
   ////////////////////////// DO NOT MODIFY
   check("ounces", input); // DO NOT MODIFY
   ////////////////////////// DO NOT MODIFY
